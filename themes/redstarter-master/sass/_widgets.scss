@@ -3,12 +3,40 @@
 --------------------------------------------------------------*/
 
 .widget {
-	margin: 0 0 $base__space-unit;
+	margin: 0 0 ($base__space-unit * 2);
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+
+	h2 {
+		@include font-size(1.5);
+	}
+
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	p {
+      margin-bottom: $base__space-unit / 3;
+   }
+
+	.contact-meta {
+		display: flex;
+
+		i {
+			line-height: 1.8;
+	      margin-right: $base__space-unit / 3;
+			width: 20px;
+	   }
+	}
+
+   .day-of-week {
+      font-weight: bold;
+   }
 }
 
 /* Search widget. */

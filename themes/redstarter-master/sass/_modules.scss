@@ -55,8 +55,27 @@
 # Clearings
 --------------------------------------------------------------*/
 
-.clearfix {
+.clearfix:after {
 	clear: both;
 	content: "";
 	display: table;
+}
+
+/*--------------------------------------------------------------
+# Helper Classes
+--------------------------------------------------------------*/
+
+/* Container width */
+.container {
+	@include container;
+}
+
+.custom-hero {
+	// background set dynamically in extras.php
+	color: white;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	text-align: center;
 }

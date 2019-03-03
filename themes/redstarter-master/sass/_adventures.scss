@@ -1,0 +1,114 @@
+/*--------------------------------------------------------------
+# Adventures
+--------------------------------------------------------------*/
+
+/* Adventure Post Type Archive */
+
+.post-type-archive-adventure {
+  .page-header {
+    border-bottom: $base__border-dashed;
+    margin-bottom: $base__space-unit * 2;
+    padding-bottom: $base__space-unit;
+    text-align: center;
+  }
+}
+
+.adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $base__space-unit;
+  margin-bottom: $base__space-unit * 3;
+}
+
+.adventure-grid-item {
+  position: relative;
+
+  &:before {
+    content: '';
+    float: left;
+    padding-top: 100%;
+  }
+
+  .story-wrapper {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:after {
+      background: rgba(0, 0, 0, 0.35);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+  }
+
+  img {
+    left: 50%;
+    max-height: 550px;
+    max-width: none;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  .story-info {
+    margin: ($base__space-unit * 3) $base__space-unit;
+    position: absolute;
+    z-index: 200;
+  }
+
+  h2 {
+    font-family: $font__main;
+    @include font-size(3);
+    font-weight: normal;
+    margin-bottom: $base__space-unit * 3;
+    text-transform: none;
+
+    a {
+      color: white;
+
+      &:hover {
+        color: $color__brand-yellow;
+      }
+    }
+  }
+}
+
+/* Single Adventure Posts */
+
+.single-adventure {
+  .entry-title,
+  .entry-meta,
+  .entry-content,
+  .entry-footer {
+    max-width: 800px;
+  }
+
+  .entry-title {
+    margin-top: 3rem;
+  }
+
+  .entry-meta {
+    font-family: $font__alt;
+    @include font-size(1.2);
+    text-transform: uppercase;
+  }
+
+  .entry-content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+

@@ -2,6 +2,60 @@
 # Content
 --------------------------------------------------------------*/
 
+/* Sticky Footer */
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.site {
+	flex: 1 0 auto;
+}
+
+/* Layout */
+
+.site-content {
+	padding-top: 50px; /* fixed menu offset */
+
+	.home & ,
+	.page-template-about & ,
+	.single-adventure & {
+		padding-top: 0;
+	}
+
+	.single-product & {
+		@include container();
+	}
+}
+
+body:not(.home):not(.page-template-about):not(.single-adventure) {
+	.content-area,
+	.widget-area {
+		padding-top: $base__space-unit * 2;
+		padding-bottom: $base__space-unit * 2;
+	}
+}
+
+body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) {
+	.site-content {
+		display: flex;
+		@include container();
+	}
+
+	.content-area {
+		border-right: $base__border;
+		padding-right: 5%;
+		width: 73%;
+	}
+
+	.widget-area {
+		padding-left: 5%;
+		width: 27%;
+	}
+}
+
 /* Posts and pages */
 
 .sticky {
@@ -9,7 +63,7 @@
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+	margin: 0 0 ($base__space-unit * 3);
 }
 
 .updated:not(.published){
@@ -21,6 +75,11 @@
 	display: inline;
 }
 
+.entry-title,
+.page-title {
+	margin-top: 0;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -30,6 +89,61 @@
 .page-links {
 	clear: both;
 	margin: 0 0 $base__space-unit;
+}
+
+.blog,
+.single-post,
+.archive:not(.tax-product-type):not(.post-type-archive) {
+	.entry-header {
+		line-height: 0;
+		position: relative;
+
+		h1, h2 {
+			background-color: $color__brand-green;
+			color: white;
+			@include font-size(2.1);
+			left: 0;
+			padding: ($base__space-unit / 2) $base__space-unit;
+			position: absolute;
+			margin-top: $base__space-unit * 1.5;
+			max-width: 75%;
+			top: 0;
+		}
+	}
+
+	.entry-meta {
+		background-color: $color__brand-green;
+		bottom: 0;
+		color: white;
+		display: inline-block;
+		font-family: $font__alt;
+		padding: ($base__space-unit * .6667) $base__space-unit;
+		position: absolute;
+		right: 0;
+		text-transform: uppercase;
+	}
+
+	.entry-header,
+	.entry-meta {
+		a {
+			color: white;
+
+			&:hover {
+				color: $color__brand-yellow
+			}
+		}
+	}
+}
+
+.cat-links,
+.tags-links {
+	display: inline-block;
+	font-family: $font__alt;
+	text-transform: uppercase;
+}
+
+.cat-links {
+	margin-right: $base__space-unit;
 }
 
 /* Asides */
@@ -44,6 +158,134 @@
 .comment-content a {
 	word-wrap: break-word;
 }
+
 .bypostauthor {
 	display: block;
+}
+
+.comments-title {
+	margin-bottom: 0;
+}
+
+.comment-list {
+	margin-left: 0;
+	padding-left: 0;
+
+	& > li {
+		border-bottom: $base__border;
+	}
+}
+
+.children li {
+	border-top: $base__border;
+}
+
+.comment {
+	padding-top: $base__space-unit;
+
+	article {
+		padding-bottom: $base__space-unit;
+	}
+}
+
+.comment-body {
+	display: flex;
+
+	p {
+		margin-bottom: $base__space-unit / 2;
+	}
+}
+
+.comment-author-avatar {
+	border-radius: 50%;
+	height: 64px;
+	margin-right: $base__space-unit;
+	overflow: hidden;
+	width: 64px;
+}
+
+.comment-author {
+	cite {
+		font-style: normal;
+		font-weight: bold;
+	}
+}
+
+.comment-metadata {
+	color: $color__brand-med-grey;
+	margin-bottom: $base__space-unit / 2;
+}
+
+.required {
+	color: $color__brand-orange;
+}
+
+.comment-form-author,
+.comment-form-email {
+	float: left;
+
+	input {
+		width: 100%;
+	}
+}
+
+.comment-form-author {
+	margin-right: 1%;
+	width: 49%;
+}
+
+.comment-form-email {
+	margin-left: 1%;
+	width: 49%;
+}
+
+.comment-form-url {
+	clear: left;
+	width: 100%;
+
+	input {
+		width: 100%;
+	}
+}
+
+.comment-reply-title {
+	margin-top: $base__space-unit;
+}
+
+#cancel-comment-reply-link:hover {
+	text-decoration: none;
+}
+
+/* Social Buttons */
+
+.social-buttons {
+	margin: $base__space-unit 0;
+
+	i {
+		margin-right: 10px;
+	}
+}
+
+/* Archives and Search Results */
+
+.archive:not(.post-type-archive):not(.tax-product-type),
+.search {
+	.page-header {
+		border-bottom: $base__border;
+		margin-bottom: 3rem;
+		padding-bottom: 1rem;
+	}
+
+	.entry-meta {
+		font-family: $font__alt;
+		text-transform: uppercase;
+	}
+}
+
+/* 404 Page */
+
+.error404 {
+	.search-submit {
+		margin-top: -2px;
+	}
 }

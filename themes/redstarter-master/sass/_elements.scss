@@ -67,11 +67,11 @@ img {
   max-width: 100%; /* Adhere to container width. */
 }
 
+img[src*='.svg'] {
+  width: 100%; /* auto height scaling for svgs in IE11*/
+}
+
 table {
   margin: 0 0 $base__space-unit;
   width: 100%;
-}
-
-h1 {
-  color: red;
 }
