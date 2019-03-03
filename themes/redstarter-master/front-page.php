@@ -1,6 +1,7 @@
 <?php
 /**
  * The main template file.
+ * Template Name: Front Page
  *
  * @package RED_Starter_Theme
  */
@@ -15,11 +16,9 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<section class="home-hero">
 					<img src="http://localhost:8888/wordpress/wp-content/themes/redstarter-master/images/inhabitent-logo-full.svg" class="logo" alt="Inhabitent full logo">
 				</section>
-			<?php endif; ?>
 
 
 			<section class="product-info container">
@@ -105,14 +104,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
-
-
-
-
-
-
 
 
 

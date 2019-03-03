@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying archive pages.
- * template name : Archive  
+ * template name: Archive  
  *
  * @package RED_Starter_Theme
  */
@@ -40,5 +40,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

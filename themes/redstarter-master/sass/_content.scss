@@ -38,7 +38,8 @@ body:not(.home):not(.page-template-about):not(.single-adventure) {
 	}
 }
 
-body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) {
+	
+.page-template-find-us, .page-template-journal{
 	.site-content {
 		display: flex;
 		@include container();
