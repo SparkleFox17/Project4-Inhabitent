@@ -40,7 +40,7 @@ class business_hours extends WP_Widget {
      *
      * @var      string
      */
-    protected $widget_slug = 'bsuiness-hours'; 
+    protected $widget_slug = 'business-hours'; 
 
 	/*--------------------------------------------------*/
 	/* Constructor
@@ -102,7 +102,7 @@ class business_hours extends WP_Widget {
 		$saturday = empty( $instance['saturday'] ) ? '' : apply_filters( 'saturday', $instance['saturday'] );
 		$sunday = empty( $instance['sunday'] ) ? '' : apply_filters( 'sunday', $instance['sunday'] ); 
 
-		// TODO: other fields go here...
+		// TODO: other fields go here...`
 
 		ob_start();
 

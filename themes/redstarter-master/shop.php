@@ -15,16 +15,16 @@ get_header(); ?>
    				<h1 class="page-title">Shop Stuff</h1>
                 <ul class="product-type-list">
                 	<li>
-                        <p><a href="http://localhost:8888/wordpress/product-type/do/">Do</a></p>
+                        <p><a href="http://localhost:8888/wordpress/do/">Do</a></p>
                     </li>
                     <li>
-                        <p><a href="http://localhost:8888/wordpress/product-type/eat/">Eat</a></p>
+                        <p><a href="http://localhost:8888/wordpress/eat/">Eat</a></p>
                     </li>
                     <li>
-                        <p><a href="http://localhost:8888/wordpress/product-type/sleep/">Sleep</a></p>
+                        <p><a href="http://localhost:8888/wordpress/sleep/">Sleep</a></p>
                     </li>
                     <li>
-                        <p><a href="http://localhost:8888/wordpress/product-type/wear/">Wear</a></p>
+                        <p><a href="http://localhost:8888/wordpress/wear/">Wear</a></p>
                     </li>
                 </ul>
             </header>

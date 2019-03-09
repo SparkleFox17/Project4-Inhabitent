@@ -89,7 +89,7 @@ get_header(); ?>
 						?>
 					</ul>                 
 				<p class="see-more">
-					<a href="https://tent.academy.red/adventures/" class="btn">More Adventures</a>
+					<a href="https://localhost:8888/wordpress/adventures/" class="btn">More Adventures</a>
 				</p>
 			</section>
 
