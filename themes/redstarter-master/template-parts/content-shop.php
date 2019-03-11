@@ -20,6 +20,6 @@
                   
 	<div class="product-info">
 		<h2 class="entry-title"> <?php the_title(); ?>  </h2>                     
-		<span class="price"><?php //the_post_price(); ?></span>
+		<span class="price"><?php echo get_post_meta($post->ID, 'price', true); ?></span>
     </div>
 </div>

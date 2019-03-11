@@ -24,7 +24,7 @@
 		</header><!-- .entry-header -->
 
         <div class="entry-content">
-            <p class="price"><?php //the_price(); ?></p>
+            <p class="price"><?php echo get_post_meta($post->ID, 'price', true); ?></p>
             		
 			<p><?php the_content(); ?></p>
                   

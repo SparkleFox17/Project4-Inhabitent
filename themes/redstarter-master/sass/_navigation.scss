@@ -77,15 +77,21 @@ a {
 	}
 
 	li {
-		float: left;
+		float: right;
 		padding-left: $base__space-unit;
 		position: relative;
+
+
 
 		&:hover > a,
 		&.focus > a {
 		}
 	}
 
+	li:first-child{
+		float:left;
+		
+	}
 	a {
 		display: block;
 		text-decoration: none;

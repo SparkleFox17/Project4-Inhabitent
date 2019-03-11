@@ -20,23 +20,28 @@ get_header(); ?>
 
 			<div class="product-grid">
 
-				<?php
+			<?php
 
 
-				$products_IDs = new WP_Query( array(
-					
-						'product_tag'=>'DO',
-				
-					'post_type' => 'product',
-					'posts_per_page' => -1,
-				));
+$args = array(
+	'tax_query' => array(
+		array(
+			'taxonomy' => 'new_product_type',
+			'field' => 'slug',
+			'terms' => 'DO'
+		)
+	),
+	'posts_per_page' => -1,
+	'order' => 'ASC',
+);
+$products_IDs = new WP_Query( $args );
 
-				while ($products_IDs->have_posts() ) : $products_IDs->the_post();
-	
-			
-				get_template_part( 'template-parts/content', 'shop' );
-				
-				endwhile;
+while ($products_IDs->have_posts() ) : $products_IDs->the_post();
+
+get_template_part( 'template-parts/content', 'shop' );
+
+endwhile;
+
 
 				?>
 			</div>

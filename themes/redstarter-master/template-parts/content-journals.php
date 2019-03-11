@@ -23,16 +23,12 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<?php the_excerpt(); ?>
+
+		<p><a href="<?php the_title( esc_url(get_permalink()) ); ?> " class="read-more black-btn">Read more →</a></p>
+		  
+		
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php red_starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
 </article><!-- #post-## -->
