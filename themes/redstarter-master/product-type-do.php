@@ -10,6 +10,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<div class="container">
+		
+		
 
 
 			<header class="page-header" style="text-align: center;">
@@ -21,7 +24,7 @@ get_header(); ?>
 			<div class="product-grid">
 
 			<?php
-
+		
 
 $args = array(
 	'tax_query' => array(
@@ -46,8 +49,9 @@ endwhile;
 				?>
 			</div>
 
-	
+			</div>
 		</main><!-- #main -->
+	
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

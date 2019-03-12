@@ -10,7 +10,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<div class="container">
 
 			<header class="page-header" style="text-align: center;">
    				
@@ -44,8 +44,8 @@ endwhile;
 
 				?>
 			</div>
-
-	
+			
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
