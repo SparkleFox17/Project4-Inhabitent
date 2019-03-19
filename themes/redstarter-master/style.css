@@ -563,7 +563,7 @@ a {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
-    float: right;
+    float: left;
     padding-left: 1.5rem;
     position: relative; }
   .main-navigation li:first-child {
@@ -698,12 +698,12 @@ a {
 .site-header {
   background-color: rgba(255, 255, 255, 0.85);
   border-bottom: 1px solid #e1e1e1;
-  padding: 0.5rem 0;
+  padding: .5rem 0;
   position: fixed;
-  -webkit-transition: top 500ms linear;
-  transition: top 500ms linear;
+  -webkit-transition: top .5s linear;
+  transition: top .5s linear;
   width: 100%;
-  z-index: 500; }
+  z-index: 3; }
   .site-header .container {
     -webkit-box-align: center;
         -ms-flex-align: center;

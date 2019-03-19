@@ -70,28 +70,6 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section id="adventures"  class="container adventures ">
-				<h2>Latest Adventures</h2>
-					<ul>
-						<?php
-						//LOOP FOR ADVENTURES
-						$args = array(
-							'category_name' => 'adventures',
-							'posts_per_page' => -1,
-							'order' => 'ASC',
-						);
-
-						$your_query = new WP_Query($args);
-
-						while ($your_query->have_posts()) : $your_query->the_post();
-						get_template_part( 'template-parts/content','adventures' ); 
-						endwhile;
-						?>
-					</ul>                 
-				<p class="see-more">
-					<a href="https://localhost:8888/wordpress/adventures/" class="btn">More Adventures</a>
-				</p>
-			</section>
 
 			<?php the_posts_navigation(); ?>
 

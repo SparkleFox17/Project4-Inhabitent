@@ -12,7 +12,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		<div class="container">
 			<header class="page-header">
-   				<h1 class="page-title">Shop Stuff</h1>
+				   <h1 class="page-title" style="text-align : center">Shop Stuff</h1>
+			
                 <ul class="product-type-list">
                 	<li>
                         <p><a href="http://localhost:8888/wordpress/do/">Do</a></p>
